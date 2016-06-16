@@ -1,9 +1,46 @@
 ---
 layout: default
 ---
+<section class="svg-dots">
+<div class="container">
 
-<div class="row">
-<div class="col-md-12">
+  <div class="row">
+  <div class="col-sm-8 col-md-8 ">
+    <div class="cartoon-box">Jea. This is my web page and here is my blob.</div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="blob-box">
+      <h2 class="cartoon-text">Blob box</h2>
+      <ul class="post-list">
+        {% for post in paginator.posts %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h4><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="pagination cartoon-text">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous"> < </a>
+        {% else %}
+          <span class="previous"> < </span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next"> > </a>
+        {% else %}
+          <span class="next"> > </span>
+        {% endif %}
+      </div>
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
 
   <ul class="cart-list">
     {% for c in site.carts_collection %}
@@ -16,22 +53,4 @@ layout: default
   </ul>
 
 </div>
-</div>
-
-<div class="row">
-<div class="col-md-12">
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
-</div>
+</section>

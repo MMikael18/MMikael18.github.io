@@ -13,9 +13,17 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: MMikael_18
 github_username: MMikael18
 
+# This will require each of these gems automatically.
+gems: [jekyll-paginate]
+paginate: 5
+
 # Build settings
 markdown: kramdown
+
 # Setup
+# paginate: 5
+# paginate_path: "page:num"
+
 collections:
 - carts_collection
 

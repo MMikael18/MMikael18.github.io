@@ -1,33 +1,37 @@
-<div class="row">
-<div class="col-md-12">
+<div class="container">
 
-  <h4 class="footer-heading">{{ site.title }}</h4>
+  <div class="row">
+  <div class="col-md-12">
 
-</div>
-</div>
+    <h4 class="footer-heading">{{ site.title }}</h4>
 
-<div class="row">
-<div class="col-sm-3">
-  <ul class="contact-list">
-    <li>{{ site.title }}</li>
-  </ul>
-</div>
-<div class="col-sm-6">
-  <p>{{ site.description }}</p>
-</div>
-<div class="col-sm-3">
-  <ul class="social-media-list">
-    {% if site.github_username %}
-    <li>
-      {% include icon-github.html username=site.github_username %}
-    </li>
-    {% endif %}
+  </div>
+  </div>
 
-    {% if site.twitter_username %}
-    <li>
-      {% include icon-twitter.html username=site.twitter_username %}
-    </li>
-    {% endif %}
-  </ul>
-</div>
+  <div class="row">
+  <div class="col-sm-3">
+    <ul class="contact-list">
+      <li>{{ site.title }}</li>
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    <p>{{ site.description }}</p>
+  </div>
+  <div class="col-sm-3">
+    <ul class="social-media-list">
+      {% if site.github_username %}
+      <li>
+        {% include icon-github.html username=site.github_username %}
+      </li>
+      {% endif %}
+
+      {% if site.twitter_username %}
+      <li>
+        {% include icon-twitter.html username=site.twitter_username %}
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+  </div>
+
 </div>
