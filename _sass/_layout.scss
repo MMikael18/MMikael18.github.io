@@ -20,9 +20,9 @@ body{
 }
 
 .navbar{
+  background-color:  transparent;
   margin-bottom: 0!important;
 }
-
 .yellow-area{
   background-color: $color-one;
 }
@@ -70,24 +70,6 @@ body{
 .page-heading {
     font-size: 20px;
 }
-ul.cart-list{
-  margin-left: 0;
-  list-style: none;
-  display: flex;
-
-  > li {
-    margin: 1% 1%;
-    border: solid 1px #ccc;
-    width: 100%;
-    padding: 15px;
-    -webkit-box-shadow: $box-shadow;-moz-box-shadow: $box-shadow;box-shadow: $box-shadow;
-  }
-  .cart-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-  }
-}
-
 /**
  * Posts
  */

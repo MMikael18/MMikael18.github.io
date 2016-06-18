@@ -1,0 +1,17 @@
+<div class="to-item">
+	<div class="to-title">		
+		{% if include.title %}
+	      {{ include.title }}
+	    {% else %}
+			title
+	    {% endif %}
+	</div>
+	<div class="to-content">
+		{% if include.content %}
+	      {{ include.content }}
+	    {% else %}
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	    {% endif %}
+	</div>
+	<object name="ready" data-ready="{{ include.ready }}" class="ready-line" data="/assets/todoready.svg" type="image/svg+xml"></object>
+</div>

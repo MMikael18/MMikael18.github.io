@@ -1,16 +1,17 @@
 ---
 layout: default
+js: js/todo.js
 ---
 <section class="svg-dots">
 <div class="container">
 
   <div class="row">
   <div class="col-sm-8 col-md-8 ">
-    <div class="cartoon-box">Jea. This is my web page and here is my blob.</div>
+    <div class="cartoon-box">This is my web page and here is my blog.</div>
   </div>
   <div class="col-sm-4 col-md-4">
     <div class="blob-box">
-      <h2 class="cartoon-text">Blob box</h2>
+      <h2 class="cartoon-text">Blog box</h2>
       <ul class="post-list">
         {% for post in paginator.posts %}
           <li>
@@ -39,9 +40,41 @@ layout: default
 </div>
 </section>
 
-<section>
+<section class="todo-back">
 <div class="container">
 
+  <div class="row">
+  <div class="col-sm-12 col-md-12 ">
+    <h1 class="cartoon-text">Project's list</h1>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-12 col-md-12 ">
+
+  <div class="todo">
+    <div class="to-colum">
+      <h4>Back</h4>
+      {% include todo-item.html ready='50' %}
+    </div>
+    <div class="to-colum">
+      <h4>In progres</h4>
+      {% include todo-item.html title='Todo list' content='Public todo list my projects.' ready='30' %}
+      {% include todo-item.html ready='50' %}
+      {% include todo-item.html ready='50' %}
+    </div>
+    <div class="to-colum">
+      <h4>Wait or testing</h4>
+      {% include todo-item.html ready='80' %}   
+      {% include todo-item.html ready='20' %}
+    </div>
+    <div class="to-colum">
+      <h4>Done</h4>
+      {% include todo-item.html ready='95' %}
+    </div>
+  </div>
+
+<!--
   <ul class="cart-list">
     {% for c in site.carts_collection %}
       <li>
@@ -51,6 +84,9 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+-->
+  </div>
+  </div>
 
 </div>
 </section>
