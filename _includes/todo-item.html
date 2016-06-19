@@ -1,4 +1,4 @@
-<div class="to-item">
+<div class="to-item" name="todoItem">
 	<div class="to-title">		
 		{% if include.title %}
 	      {{ include.title }}
@@ -13,5 +13,5 @@
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	    {% endif %}
 	</div>
-	<object name="ready" data-ready="{{ include.ready }}" class="ready-line" data="/assets/todoready.svg" type="image/svg+xml"></object>
+	<object data-toggle="tooltip" data-placement="top" title="{{ include.ready }}%" name="ready" data-ready="{{ include.ready }}" class="ready-line" data="/assets/todoready.svg" type="image/svg+xml"></object>
 </div>

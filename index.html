@@ -7,16 +7,16 @@ js: js/todo.js
 
   <div class="row">
   <div class="col-sm-8 col-md-8 ">
-    <div class="cartoon-box">This is my web page and here is my blog.</div>
+    <h1>Welcome to my web</h1>
   </div>
   <div class="col-sm-4 col-md-4">
     <div class="blob-box">
-      <h2 class="cartoon-text">Blog box</h2>
+      <h4 class="cartoon-text">Typos & Tips the blog</h4>
       <ul class="post-list">
         {% for post in paginator.posts %}
           <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <h4><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></br>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </li>
         {% endfor %}
       </ul>
@@ -45,7 +45,7 @@ js: js/todo.js
 
   <div class="row">
   <div class="col-sm-12 col-md-12 ">
-    <h1 class="cartoon-text">Project's list</h1>
+    <h2 class="cartoon-text">Project's list</h2>
   </div>
   </div>
 
@@ -90,3 +90,10 @@ js: js/todo.js
 
 </div>
 </section>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+});
+</script>

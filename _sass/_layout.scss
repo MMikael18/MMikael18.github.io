@@ -27,7 +27,8 @@ body{
   background-color: $color-one;
 }
 .svg-dots {
-  background-image: url("/assets/dots.svg");
+  /*background-image: url("/assets/dots.svg");*/
+  background-color: $color-one;
   background-repeat: repeat;
   image-orientation: 30deg flip;
 }
@@ -35,18 +36,9 @@ body{
 .cartoon-text{
   font-family: $effet-font-family;
 }
-.cartoon-box {
-  padding: 5px 15px;
-  border: solid 5px black;
-  background-color: white;
-  font-family: $effet-font-family;
-  font-size: 24px;
-  @include media-query($sm) {
-      font-size: 18px;
-  }
-}
 
 .blob-box{
+  overflow: auto;
   background-color: white;
   width: 250px;
   -webkit-box-shadow: $box-shadow;-moz-box-shadow: $box-shadow;box-shadow: $box-shadow;
@@ -55,10 +47,16 @@ body{
   }
   > ul.post-list{
     list-style: none;
-    margin: 10px;
+    margin: 0;
     li{
-      padding: 5px 15px;
+      padding: 0px;
     }
+  }
+  > *{
+    margin: 15px!important;
+  }
+  @include media-query($sm) {
+      width: auto;
   }
 }
 /* ---- Site header ---- */
@@ -70,49 +68,3 @@ body{
 .page-heading {
     font-size: 20px;
 }
-/**
- * Posts
- */
- /*
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
-*/
