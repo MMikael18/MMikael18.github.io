@@ -1,5 +1,19 @@
 body{
   font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  color: #444;
+  margin: 0;
+}
+h3.list_title{
+  font-weight: lighter;
+  display: block;
+  margin:0;
+  padding: 10px;
+  color: white;
+  background: #56aaf0; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #56aaf0 0%, #616bb2 100%);
+  background: -webkit-linear-gradient(-45deg, #56aaf0 0%,#616bb2 100%);
+  background: linear-gradient(135deg, #56aaf0 0%,#616bb2 100%);
 }
 ul.links{
   margin: 0;
@@ -7,7 +21,14 @@ ul.links{
   list-style: none;
 }
 ul.links li a{
-  padding: 5px 10px;
+  color: #444;
+  font-size: bold;
+  padding: 10px;
+  margin-bottom: 1px;
+  border-radius: 4px;
   display: block;
   text-decoration: none;
+}
+ul.links li a:hover{
+  background-color: #ecf0f2;
 }
