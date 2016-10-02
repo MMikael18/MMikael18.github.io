@@ -1,0 +1,39 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Personal web site",
+  "main": "index.html",
+  "dependencies": {
+    "babel-core": "^6.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "materialize-css": "^0.97.7",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "local-web-server": "^1.2.6"
+  },
+  "local-web-server": {
+    "port": 8100,
+    "forbid": "*.json"
+  },
+  "scripts": {
+    "start": "ws",
+    "dev": "ws | webpack -d --watch",
+    "build" : "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMikael18/MMikael18.github.io.git"
+  },
+  "author": "Matti Mikael Uusitalo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MMikael18/MMikael18.github.io/issues"
+  },
+  "homepage": "https://github.com/MMikael18/MMikael18.github.io#readme"
+}
