@@ -4,101 +4,50 @@ article{
   padding-bottom: 15px;
 }
 /* Sosial media cards */
+
 .sos{
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
 }
-.sos > .img{
-  width: 64px;
-  height: 64px;
-  overflow: hidden;
-}
-  .sos > .img img{
-    width: 64px;
-    height: auto;
-  }
-.sos > div.sos-item{
-  position: relative;
-  padding: 0 15px;
-  flex-grow: 1;
-}
-.sos-item > .stitle{
-  margin: 0;
-  font-weight: bold;
-}
-.sos-item > p{
-  margin: 0;
-  padding-right: 80px;
-  line-height: 1.2em;
-  font-size: .9em;
-}
-.sos-item > p span{
-  display: block;
-}
-.sos-item > a{
-  position: absolute;right: 10px;bottom: 0;
-}
-
-.round-button{
-  color: white;
-  padding: 5px 15px;
-  background-color: #ef5350;
-  border-radius: 99px 99px 99px 99px;
-  -moz-border-radius: 99px 99px 99px 99px;
-  -webkit-border-radius: 99px 99px 99px 99px;
-  border: 0px solid #000000;
-}
-.round-button:hover{
-  background-color: #e57373;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-}
-/*
-.sos{
-  border: solid 1px #ccc;
-  border-radius: 10px 10px 10px 10px;
-  margin-bottom: 5px;
-  overflow: hidden;
-  display: table;
-  width: 100%;
-}
-.sos:last-child{
-  margin-right: 0;
-}
-.sos > div{
-  height: 8rem;
-  display: table-cell;
-}
-.sos > div:nth-child(1){
-  vertical-align: middle;
+.sos > *{
   text-align: center;
-  width: 30%;
 }
-.sos > div:nth-child(2){
-  width: 70%;
+.sosimg{
+  position: relative;
+  height: 64px;width: 64px;  
+  vertical-align: middle;
 }
-.sos img{}
-.col:nth-child(1) .sos img{width: 7rem;}
-.col:nth-child(2) .sos img{width: 5rem;}
-.col:nth-child(3) .sos img{width: 7rem;}
-.col:nth-child(4) .sos img{width: 5rem;}
-.sos > div > a, .sos > div > p {
+.sosimg img{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: auto;
+}
+.soscontent {
+  margin-top: 5px;
+  line-height: 1.4em;
+}
+.sostitle{
+  font-size: 1.2em;
+  font-weight: bold;
   display: block;
-  padding: 5px 10px;
 }
-.sos div a{
-  background-color: #56aaf0;
-  color: white;
-}
-.sos div a:hover{
-  background-color: #616bb2;
-}
-.sos div p{
-  font-size: .9rem;
-  text-align: left;
-  border-left: solid 1px #ccc;
-  display: block;
+.soscontent p{
+  font-size: .8em;
   margin: 0;
-  height: 100%;
+}
+.soscontent a{
+  margin-top: 5px;
+  padding:  5px 15px 3px 15px;
+  border: solid 1px #ccc;
+  color: #999;
+  display: inline-block;
+  border-radius: 19px 19px 19px 19px;
+}
+.soscontent a:hover{
+  background-color: #444;
+  color: white;
 }

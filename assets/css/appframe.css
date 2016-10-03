@@ -1,7 +1,7 @@
 *{transition: background-color 0.5s ease;}
 html,body{
   margin: 0;
-  width: 100%;height: 100%;
+  /*width: 100%;height: 100%;*/
 }
 body{
   background: rgba(255,255,255,1);
@@ -13,9 +13,5 @@ body{
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 47%, rgba(245,245,245,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0 );
 }
-#main{
-  
-}
-.brand-logo{
-  font-weight: lighter;
-}
+#main{}
+.brand-logo{font-weight: lighter;}

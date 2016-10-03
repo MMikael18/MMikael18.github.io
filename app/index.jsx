@@ -8,14 +8,13 @@ var GetSositem = React.createClass({
     return(
       <div className="col s12 m6 l3">
         <div className="sos">
-          <div className="img">
+          <div className="sosimg">
             <img src={this.props.item.img} />
           </div>
-          <div className="sos-item">
-            <span className="stitle">{this.props.item.title}</span>
-            <p><span>{this.props.item.name}</span>
-              {this.props.item.text}
-            </p>
+          <div className="soscontent">
+            <span className="sostitle">{this.props.item.title}</span>
+            <span>{this.props.item.name}</span>
+            <p>{this.props.item.text}</p>
             <a href={this.props.item.url} className="round-button">Visit</a>
           </div>
         </div>
@@ -24,14 +23,11 @@ var GetSositem = React.createClass({
   }
 });
 var Soslist = React.createClass({
-  num: 0,
   render: function() {
-    var self = this;
     return (
         <div className="row">
           {this.props.data.map(function(item) {
-            self.num += 1;
-            return <GetSositem key={self.num} item={item} />;
+            return <GetSositem key={item.key} item={item} />;
           })}
         </div>
     );
